@@ -1,6 +1,6 @@
 cask "valentine" do
-  version "1.0"
-  sha256 "10fb7d4d4a8636c14405333647e10f2ba7a16665a92906528bd5c069c6212a46"
+  version "1.1"
+  sha256 "8360528471f020706c16bb759a6b8b7daa5a08ea62346d424e88243c24a9bea3"
 
   url "https://github.com/JesusChapman/valentine/releases/download/#{version}/Valentine_v#{version}_Apple_Silicon.dmg"
   name "Valentine"
