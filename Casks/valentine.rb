@@ -7,7 +7,7 @@ cask "valentine" do
   desc "A elegant native music player with support off synchronized lyrics"
   homepage "https://github.com/JesusChapman/valentine"
 
-  depends_on macos: :tahoe
+  depends_on macos: tahoe
 
   app "Valentine.app"
 
