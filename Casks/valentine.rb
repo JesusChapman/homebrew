@@ -4,10 +4,10 @@ cask "valentine" do
 
   url "https://github.com/JesusChapman/valentine/releases/download/v#{version}/Valentine_v#{version}_Universal.dmg"
   name "Valentine"
-  desc "A elegant native music player with support off synchronized lyrics"
+  desc "A elegant native music player with support for synchronized lyrics"
   homepage "https://github.com/JesusChapman/valentine"
 
-  depends_on macos: tahoe
+  depends_on macos: :tahoe
 
   app "Valentine.app"
 
