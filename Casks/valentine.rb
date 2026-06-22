@@ -1,11 +1,13 @@
 cask "valentine" do
-  version "1.1"
-  sha256 "8360528471f020706c16bb759a6b8b7daa5a08ea62346d424e88243c24a9bea3"
+  version "1.2"
+  sha256 "1c960177eaf9fba9e8039c9e94166996c04287e29a4f5738ba05b81cd2f81f39"
 
-  url "https://github.com/JesusChapman/valentine/releases/download/#{version}/Valentine_v#{version}_Apple_Silicon.dmg"
+  url "https://github.com/JesusChapman/valentine/releases/download/v#{version}/Valentine_v#{version}_Universal.dmg"
   name "Valentine"
-  desc "Elegant native music player and synchronized lyrics editor"
+  desc "A elegant native music player for MacOS with support off synchronized lyrics"
   homepage "https://github.com/JesusChapman/valentine"
+
+  depends_on macos: :tahoe
 
   app "Valentine.app"
 
