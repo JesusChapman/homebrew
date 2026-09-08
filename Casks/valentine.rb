@@ -1,6 +1,6 @@
 cask "valentine" do
-  version "1.2"
-  sha256 "1c960177eaf9fba9e8039c9e94166996c04287e29a4f5738ba05b81cd2f81f39"
+  version "1.3"
+  sha256 "6e3c04c02fce8207b3dab07b1ae7ae60456c965e15eb876135c02ed81e4287f6"
 
   url "https://github.com/JesusChapman/valentine/releases/download/v#{version}/Valentine_v#{version}_Universal.dmg"
   name "Valentine"
