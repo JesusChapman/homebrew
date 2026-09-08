@@ -2,7 +2,7 @@ cask "valentine" do
   version "1.3"
   sha256 "6e3c04c02fce8207b3dab07b1ae7ae60456c965e15eb876135c02ed81e4287f6"
 
-  url "https://github.com/JesusChapman/valentine/releases/download/v#{version}/valentine_v#{version}_universal.dmg"
+  url "https://github.com/JesusChapman/valentine/releases/download/v#{version}/valentine_#{version}_universal.dmg"
   name "Valentine"
   desc "Elegant native music player with support for synchronized lyrics"
   homepage "https://github.com/JesusChapman/valentine"
