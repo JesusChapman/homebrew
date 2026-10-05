@@ -1,11 +1,27 @@
 cask "valentine" do
-  version "1.3,004"
-  sha256 "6e3c04c02fce8207b3dab07b1ae7ae60456c965e15eb876135c02ed81e4287f6"
+  arch arm: "arm64", intel: "x86_64"
 
-  url "https://github.com/JesusChapman/valentine/releases/download/v#{version.csv.first}/valentine_#{version.csv.first}_#{version.csv.second}_universal.dmg"
+  version "1.4,005"
+  sha256 arm:   "3dab5ac4b99caaadccf5efb9fdf2e34656cb65eff141892e1ce195b2ddd0461e",
+         intel: "fba4766dee8ca31a7a798d5f4f94a6ca0372b14df7bd418bd898bb0579787138"
+
+  url "https://github.com/JesusChapman/valentine/releases/download/v#{version.csv.first}/valentine_#{version.csv.first}_#{version.csv.second}_#{arch}.dmg"
   name "Valentine"
   desc "Elegant native music player with support for synchronized lyrics"
   homepage "https://github.com/JesusChapman/valentine"
+
+  livecheck do
+    url :url
+    regex(/valentine[._-](\d+(?:\.\d+)+)[._-](\d+)[._-]/i)
+    strategy :github_latest do |json, regex|
+      json["assets"]&.map do |asset|
+        match = asset["name"]&.match(regex)
+        next if match.blank?
+
+        "#{match[1]},#{match[2]}"
+      end
+    end
+  end
 
   depends_on macos: :tahoe
 
